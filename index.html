@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Mori</title>
+  <link rel="stylesheet" href="index.css">
+  <!-- Link to FontAwesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">GGLeX1</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <!-- Hamburger icon for mobile -->
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init(
+      {once : true}      
+      );
+  </script>
+
+  <!-- Home Section -->
+  <section id="home">
+    <div class="intro">
+      <h1 data-aos="fade-up" data-aos-duration="3000">HELLO WORLD</h1>
+      <p data-aos="fade-up" data-aos-duration="3000">My name is Naufal Helmy Mustofa<br data-aos="fade-right" data-aos-duration="4000">I am a beginner Front End Developer</p>
+      <p data-aos="fade-up" data-aos-duration="3000" class="highlight">Welcome to my Portofolio</p>
+      <button data-aos="fade-up" data-aos-duration="3000" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Let's Connect</button>
+    </div>
+    <div data-aos="fade-up" data-aos-duration="2000" class="profile-pic">
+      <img src="foto/profil_Helmy.JPG" alt="Profile Picture">
+    </div>
+  </section>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init(
+      {once : true}      
+      );
+  </script>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2 data-aos="fade-up" data-aos-duration="2500" class="neon-title">
+      ABOUT ME</h2>
+    <div data-aos="fade-up" data-aos-duration="3000" class="about-content">
+      <p>
+        Hi, My name is Naufal Helmy Mustofa, a student with an interest in front-end web development. 
+        I am currently completing my studies as an undergraduate Mathematics student at Universitas Sebelas Maret.
+        I have a passion for technology and hope to bring positive energy through technological advancements for a better future. 
+      </p>
+    </div>
+  </section>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init(
+      {once : true}      
+      );
+  </script>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2 data-aos="fade-up" data-aos-duration="2500" >SKILLS WHAT CAN I DO?</h2>
+    <div data-aos="fade-up" data-aos-duration="3000" class="skills-grid">
+      <div class="skill">
+        <img src="foto/HTML5 Icon.png" alt="HTML5 Logo" class="skill-logo">
+        HTML5
+      </div>
+      <div class="skill">
+        <img src="foto/CSS from z-mori.png" alt="CSS Logo" class="skill-logo">
+        CSS
+      </div>
+      <div class="skill">
+        <img src="foto/JavaScript (1).png" alt="JavaScript Logo" class="skill-logo">
+        JavaScript
+      </div>
+      <div class="skill">
+        <div class="skill-logo-container">
+          <img src="foto/PHP Tech Image.png" alt="PHP Logo" class="skill-logo">
+        </div>
+        <span>PHP</span>
+      </div>      
+      <div class="skill">
+        <img src="foto/Python Tech Image.png" alt="Python Logo" class="skill-logo">
+        Python
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Social Icons Section -->
+  <footer id="contact">
+    <div class="social-icons">
+      <a href="https://www.instagram.com/naufalhelmyy" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/naufal-helmy-mustofa-a02392289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/GGLeX1" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+      </a>
+    </div>
+</footer>
+
+
+  <script src="index.js"></script>
+</body>
+</html>

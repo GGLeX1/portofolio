@@ -1,0 +1,456 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "montserrat", sans-serif;
+  font-size: 1.2rem;
+}
+
+/* Light Background Theme */
+body {
+  background-color: #f5f5f5; /* Light gray for a soft background */
+  color: #3e2723; /* Dark brown for text */
+}
+
+/* Navbar */
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between; /* Space between logo and menu toggle */
+  align-items: center; /* Center items vertically */
+  padding: 1.5rem 2.5rem;
+  background: linear-gradient(90deg, #d7ccc8 55.21%, #bcaaa4 100%);
+  color: #3e2723;
+  z-index: 1000;
+  height: 70px; /* Set the height of the navbar */
+}
+
+/* Position the hamburger icon in the top right */
+.menu-toggle {
+  display: none; /* Hidden on desktop */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  position: absolute; /* Position it absolutely */
+  right: 20px; /* Adjust as needed */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for exact vertical center */
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #3e2723;
+  transition: 0.3s ease;
+}
+
+/* Section Padding to Prevent Content Cut-Off */
+#about,
+#skills,
+#contacts {
+  padding-top: 80px; /* Adjust this based on navbar height */
+}
+
+/* For anchor links, add an offset to prevent overlap with navbar */
+section::before {
+  content: "";
+  display: block;
+  height: 70px; /* Match navbar height */
+  margin-top: -70px; /* Offset by the same amount */
+  visibility: hidden;
+}
+
+nav .logo {
+  font-size: 1.8rem; /* Slightly larger logo font */
+  color: #3e2723; /* Dark brown for logo */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem; /* Increased gap */
+  font: bold;
+}
+
+nav ul li a {
+  color: #3e2723; /* Dark brown for links */
+  text-decoration: none;
+  font: bold;
+}
+
+/* Make navbar items bold and add hover effect */
+nav ul li a {
+  color: #3e2723; /* Dark brown for links */
+  text-decoration: none;
+  font-weight: bold; /* Make text bold */
+}
+
+nav ul li a:hover {
+  color: #643120; /* Light brown on hover */
+}
+
+/* Hide nav links on mobile */
+#nav-links {
+  display: none; /* Hidden on mobile initially */
+  position: absolute;
+  top: 70px; /* Adjust based on navbar height */
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #d7ccc8 55.21%, #bcaaa4 100%);
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+/* Show nav links when active */
+#nav-links.active {
+  display: flex; /* Show the nav links when active */
+}
+
+#nav-links li {
+  margin: 0; /* Reset margin */
+}
+
+#nav-links li a {
+  padding: 1rem; /* Increase padding for better spacing */
+  display: block; /* Ensure the link takes up the full area */
+}
+
+/* Home Section */
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+  height: 100vh;
+  text-align: left;
+}
+
+.intro h1 {
+  font-size: 3rem;
+  color: #3e2723; /* Dark brown */
+  line-height: 1.2; /* Increased line height */
+  letter-spacing: 0.05em; /* Added letter spacing */
+}
+
+.intro p {
+  margin-top: 1.5rem; /* Increased top margin */
+  margin-bottom: 1.5rem; /* Increased bottom margin */
+  line-height: 1.5; /* Increased line height */
+  letter-spacing: 0.02em; /* Added letter spacing */
+}
+
+.intro h1 span {
+  color: #bcaaa4; /* Light brown */
+}
+
+.intro p.highlight {
+  color: #bcaaa4; /* Light brown */
+}
+
+button {
+  background-color: #d7ccc8; /* Light brown */
+  color: #3e2723; /* Dark brown for text */
+  border: none;
+  padding: 0.75rem 1.5rem; /* Increased padding */
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 2.5%;
+}
+
+button {
+  background-color: #d7ccc8; /* Light brown */
+  color: #3e2723; /* Dark brown for text */
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 2.5%;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+  background-color: #3e2723; /* Dark brown on hover */
+  color: #f5f5f5; /* Light text color for contrast */
+}
+
+/* Profile Picture */
+.profile-pic img {
+  border-radius: 50%;
+  border: 4px solid #3e2723; /* Dark brown */
+  width: 580px;
+  height: 640px;
+}
+
+/* About Section */
+#about {
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 3rem;
+  color: transparent;
+  -webkit-text-stroke: 1px #bcaaa4; /* Light brown outline */
+  filter: drop-shadow(0px 0px 10px #bcaaa4); /* Light brown glow */
+  line-height: 1.2; /* Increased line height */
+  letter-spacing: 0.05em; /* Added letter spacing */
+}
+
+.about-content p {
+  text-align: justify; /* Justify text alignment */
+  letter-spacing: 0.05rem;
+  margin-left: 30px;
+  margin-right: 30px;
+  line-height: 1.2;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.about-content img {
+  width: 400px;
+  height: 400px;
+  border: 4px solid #bcaaa4; /* Light brown */
+  border-radius: 10px;
+  margin-right: 30px;
+}
+
+/* Skills Section */
+#skills {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#skills h2 {
+  font-size: 2.5rem;
+  color: #bcaaa4; /* Light brown */
+  line-height: 1.2; /* Increased line height */
+  letter-spacing: 0.05em; /* Added letter spacing */
+}
+
+.skills-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Increased gap */
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.skill {
+  display: flex;
+  background-color: #f5f5f5; /* Light gray */
+  border: 2px solid #bcaaa4; /* Light brown */
+  padding: 1rem 2rem;
+  color: #3e2723; /* Dark brown */
+  border-radius: 5px;
+  font-size: 1.2;
+  font-weight: bold;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center logo and text horizontally */
+  text-align: center; /* Center the text below the logo */
+  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.skill:hover {
+  background-color: #bcaaa4; /* Light brown background on hover */
+  color: #f5f5f5; /* Light text color for contrast */
+  border-color: #3e2723; /* Dark brown border on hover */
+  transform: scale(1.05); /* Slightly larger on hover */
+}
+
+.skill-logo {
+  width: 50px; /* Adjust width as desired */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 8px; /* Add some space between the icon and text */
+}
+
+.skill-logo-container {
+  background-color: #f5f5f5; /* Light gray background */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Set a uniform size */
+  height: 50px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+/* Social Icons Neon Style */
+footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.social-icons i {
+  font-size: 3rem;
+  color: #d7ccc8; /* Light brown */
+  filter: drop-shadow(0px 0px 10px #d7ccc8); /* Light brown glow */
+  transition: transform 0.3s ease;
+}
+
+.social-icons i:hover {
+  transform: scale(1.2);
+}
+
+/* General Mobile Reset */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  nav .logo {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  /* Home Section with Reordered Image */
+  #home {
+    flex-direction: column;
+    padding: 1.5rem;
+    text-align: center;
+    height: auto;
+  }
+
+  /* Reorder the profile picture to come first on mobile */
+  .profile-pic {
+    order: -1; /* Moves image to the top */
+  }
+
+  .profile-pic img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .intro h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  /* About Section */
+  #about {
+    padding: 1.5rem 1rem;
+  }
+
+  #about h2 {
+    font-size: 2.2rem;
+  }
+
+  #about p {
+    letter-spacing: 0rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-content img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-content p {
+    margin: 0 1rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .social-icons {
+    gap: 1rem;
+  }
+
+  .social-icons i {
+    font-size: 2rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Skill cards stay the same size */
+    gap: 1rem;
+  }
+
+  .skill {
+    width: 250px; /* Maintain the same width for skill cards on mobile */
+    padding: 1rem;
+  }
+
+  #skills h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Show Hamburger icon */
+  .menu-toggle {
+    display: flex; /* Show on mobile */
+  }
+
+  /* Hide nav links initially on mobile */
+  #nav-links {
+    display: none; /* Hidden on mobile initially */
+    position: absolute;
+    top: 70px; /* Adjust based on navbar height */
+    left: 0;
+    width: 100%;
+    background-color: #d7ccc8; /* Background for mobile menu */
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  /* Show nav links when active */
+  #nav-links.active {
+    display: flex;
+  }
+
+  nav ul li a {
+    font-size: 1.2rem; /* Adjust font size for mobile */
+    padding: 0.5rem;
+    text-align: center;
+  }
+}
